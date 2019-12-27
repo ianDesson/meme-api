@@ -15,6 +15,6 @@ The other smaller endpoints are the following:
 
 ## Running the Server
 **Note:** NodeJS is required to run this server
-- cd to the backend/ directory
+- cd to the `backend/` directory
 - install dependencies using `npm i`
 - run the following to start the server: `node index.js`
