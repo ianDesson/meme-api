@@ -1,7 +1,25 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => res.send('Hello World'));
+const faces = require("./faces.json");
 
-app.listen(port, () => console.log(`Example app listening on port ${port}`));
+app.get("/faces", (req, res) => {
+  var resultingList = [];
+  for (var key in faces) {
+    resultingList.push(...faces[key]);
+  }
+  res.send(resultingList);
+});
+
+app.get("/faces/memes", (req, res) => {
+  res.send(faces.memes);
+});
+
+app.get("/faces/actions", (req, res) => {
+  res.send(faces.actions);
+});
+
+app.listen(port, () =>
+  console.log(`meme-api's REST API is listening on port ${port}`)
+);
