@@ -1,5 +1,6 @@
 # Meme-API
-This is a simple front-end and back-end application that acts as a resource for meme-text-faces
+This is a simple front-end and back-end application that acts as a resource for meme-text-faces.
+
 This is meant to be a proof-of-concept.
 
 ## Back-End
