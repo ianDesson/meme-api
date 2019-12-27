@@ -5,6 +5,7 @@ const port = 3000;
 const faces = require("./faces.json");
 
 app.get("/faces", (req, res) => {
+  console.log("GET request to /faces");
   var resultingList = [];
   for (var key in faces) {
     resultingList.push(...faces[key]);
@@ -13,10 +14,12 @@ app.get("/faces", (req, res) => {
 });
 
 app.get("/faces/memes", (req, res) => {
+  console.log("GET request to /faces/memes");
   res.send(faces.memes);
 });
 
 app.get("/faces/actions", (req, res) => {
+  console.log("GET request to /faces/actions");
   res.send(faces.actions);
 });
 
